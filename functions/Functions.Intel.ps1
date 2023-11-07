@@ -33,7 +33,7 @@ function Set-DriverUpdatesintel{
     RMM-Msg "Driver installed. $intelversion" -messagetype Verbose
     $Script:installstatus = "Updated"
     return
-   }
-  ###############################################################################
-  # Function - Intel Driver Installer End
-  ###############################################################################
+}
+###############################################################################
+# Function - Intel Driver Installer End
+###############################################################################

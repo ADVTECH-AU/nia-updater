@@ -112,7 +112,7 @@ if(($niaupdaterinstalled -eq $false) -or ($uptodate -eq $false -and $autoupdate 
     if(-not(Test-Path 'Registry::HKEY_LOCAL_MACHINE\Software\niaupdater')){
     New-Item -Path 'Registry::HKEY_LOCAL_MACHINE\Software\' -Name NIAupdater
     }
-    $updatedversion = Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\Software\NIAupdater' -Name 'Version' -Value $niaupdaterlatestversion -erroraction silentlycontinue
+    $updatedversion = Set-ItemProperty -Path 'Registry::HKEY_LOCAL_MACHINE\Software\niaupdater' -Name 'Version' -Value $niaupdaterlatestversion -erroraction silentlycontinue
 
     # Remove the downloaded zip file
     Remove-Item -Path $niaupdaterDownloadFile -Force
@@ -150,7 +150,7 @@ $Script:gpuInfo = $gpuInfo
 
 # Send GPU Info to RMM
 if($RMMPlatform -eq "NinjaOne"){
-   Set-GPUtoNinjaRMM
+    Set-GPUtoNinjaRMM
 }
 # Cycle through updating drivers if required
 if($update_amd -eq $true){ 

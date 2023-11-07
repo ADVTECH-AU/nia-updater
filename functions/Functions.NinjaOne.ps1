@@ -28,16 +28,16 @@ function Set-GPUtoNinjaRMM {
         }
 
     }
-if (-not $integratedGPUFound) {
-Ninja-Property-Set hardwareintegratedgpu "Not Detected"
-Ninja-Property-Set hardwareintegrateddriverinstalled clear
-Ninja-Property-Set hardwareintegrateddriverlatest clear
-Ninja-Property-Set hardwareintegrateddriveruptodate clear
-}
-if (-not $discreteGPUFound) {
-Ninja-Property-Set hardwarediscretegpu "Not Detected"
-}
-return
+    if (-not $integratedGPUFound) {
+    Ninja-Property-Set hardwareintegratedgpu "Not Detected"
+    Ninja-Property-Set hardwareintegrateddriverinstalled clear
+    Ninja-Property-Set hardwareintegrateddriverlatest clear
+    Ninja-Property-Set hardwareintegrateddriveruptodate clear
+    }
+    if (-not $discreteGPUFound) {
+    Ninja-Property-Set hardwarediscretegpu "Not Detected"
+    }
+    return
 }
 
 ###############################################################################
